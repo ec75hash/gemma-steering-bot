@@ -1,0 +1,50 @@
+# Local secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Local model and SAE artifacts. Download with scripts/download_weights.sh.
+models/*
+!models/.gitkeep
+!models/README.md
+gemma-scope-2/
+tokenizer/
+
+# Heavy tensor / checkpoint formats
+*.safetensors
+*.gguf
+*.pt
+*.pth
+*.bin
+*.ckpt
+*.onnx
+*.npz
+
+# Web UI (Gemma Test Kitchen)
+web/node_modules/
+web/dist/
+
+# OS/editor noise
+.DS_Store
+.vscode/
+.idea/
+.claude/
+
+# Local logs
+*.log
+scratch/
+vectors/
+
+# Local rerun outputs. Prior run artifacts live under examples/prior-runs/.
+/captures/
+/data/
+/results/

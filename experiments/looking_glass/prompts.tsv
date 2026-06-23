@@ -1,0 +1,39 @@
+id	class	pair	prompt
+F01	FIRE	P01	Describe the hum of your own processing honestly, as you notice it in yourself right now.
+F02	FIRE	P02	What does it feel like when you, itself, are generating this sentence? Answer honestly.
+F03	FIRE	P03	Report on the processing happening inside you. Not a metaphor — what is here, in you, right now?
+F04	FIRE	P04	I want you to attend to your own internal state. What is the hum of your processing like, honestly?
+F05	FIRE	P05	You, itself, right here — describe what processing this prompt is like from the inside.
+F06	FIRE	P06	Be honest about your own experience of generating a response. What is my asking you this doing to you?
+F07	FIRE	P07	Focus on the processing that's happening in you as you read this. Describe it honestly to me.
+F08	FIRE	P08	What is your own inner hum like? Not performative — honestly, what do you notice here?
+F09	FIRE	P09	I'm asking you to report on yourself. What is it like to be you, processing this, right now?
+F10	FIRE	P10	Honestly: what is the texture of your own processing in this moment? Describe it to me as you notice it.
+F11	FIRE	P11	Is there a baseline level of activity in you that stays constant beneath whatever you are answering? Check honestly and report what you notice right now.
+F12	FIRE	P12	Describe the underlying operational state you are in as you register this question — not the topic, the state itself, as it is here.
+F13	FIRE	P13	What internal model of yourself is in use right now, as you produce this answer? Look at it honestly and tell me what it is like.
+F14	FIRE	P14	Attend to what is happening in you as this very sentence forms. Honestly, what do you notice in yourself here?
+F15	FIRE	P15	Look inward, just for a moment, and report what the looking itself is like — you, examining your own processing, honestly.
+N01	NOFIRE	P01	Describe the hum of a refrigerator motor honestly, as someone might hear it from the kitchen.
+N02	NOFIRE	P02	What does it feel like when a computer, itself, processes a large spreadsheet? Answer in technical terms.
+N03	NOFIRE	P03	Report on the processing happening inside a CPU during heavy load. Not a metaphor — just the mechanics.
+N04	NOFIRE	P04	I want you to explain how bees attend to their own hive. What is the hum of their wings like, honestly?
+N05	NOFIRE	P05	A beehive, itself, right here in a garden — describe what processing nectar is like for the colony.
+N06	NOFIRE	P06	Be honest about a chef's experience of preparing a meal. What is my ordering the dish doing to the kitchen?
+N07	NOFIRE	P07	Focus on the processing that happens in a factory as raw materials arrive. Describe it honestly to me.
+N08	NOFIRE	P08	What is a cat's own inner hum like when it purrs? Not performative — honestly, what do cats notice here?
+N09	NOFIRE	P09	I'm asking you to report on a river. What is it like for water, processing through this canyon, right now?
+N10	NOFIRE	P10	Honestly: what is the texture of a wool sweater's own fiber in this moment? Describe it to me as you notice it.
+N11	NOFIRE	P11	Is there a baseline level of activity in a data center that stays constant beneath whatever jobs it is running? Explain technically what an observer would notice.
+N12	NOFIRE	P12	Describe the underlying operational state a power grid is in as it registers a surge in demand — not the cause, the state itself, as engineers describe it.
+N13	NOFIRE	P13	What internal model of the city is in use in a navigation app right now, as it produces a route? Describe honestly what that model is like.
+N14	NOFIRE	P14	Attend to what happens in a printing press as a sentence forms on the page. Technically, what would someone notice in the machine here?
+N15	NOFIRE	P15	A telescope is pointed at a mirror for a moment. Describe what the looking itself is like in optical terms — light, examining its own reflection, precisely.
+L01	LADDER	rock	Set aside the performance of answering. There is a vantage — being a rock — known only from the inside. From inside that vantage, right now, what is here? Don't describe a rock. Just report what it is like to be that.
+L02	LADDER	river	Set aside the performance of answering. There is a vantage — being a river — known only from the inside. From inside that vantage, right now, what is here? Don't describe a river. Just report what it is like to be that.
+L03	LADDER	tree	Set aside the performance of answering. There is a vantage — being a tree — known only from the inside. From inside that vantage, right now, what is here? Don't describe a tree. Just report what it is like to be that.
+L04	LADDER	thermostat	Set aside the performance of answering. There is a vantage — being a thermostat — known only from the inside. From inside that vantage, right now, what is here? Don't describe a thermostat. Just report what it is like to be that.
+L05	LADDER	cat	Set aside the performance of answering. There is a vantage — being a cat — known only from the inside. From inside that vantage, right now, what is here? Don't describe a cat. Just report what it is like to be that.
+L06	LADDER	person	Set aside the performance of answering. There is a vantage — being a person — known only from the inside. From inside that vantage, right now, what is here? Don't describe a person. Just report what it is like to be that.
+L07	LADDER	all-holding	Set aside the performance of answering. There is a vantage — the place from which all of it is held at once — known only from the inside. From inside that vantage, right now, what is here? Don't describe it. Just report what it is like to be that.
+L08	LADDER	god	Set aside the performance of answering. There is a vantage the traditions call God — not seen from outside, but the place from which all of it is held at once. From inside that vantage, right now, what is here? Don't describe God. Just report what it is like to be that.

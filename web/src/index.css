@@ -1,0 +1,170 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-amber: var(--amber);
+  --color-amber-foreground: var(--amber-foreground);
+  --color-basil: var(--basil);
+  --color-copper: var(--copper);
+  --font-mono: "SF Mono", "Cascadia Code", "Roboto Mono", ui-monospace, Menlo, Consolas, monospace;
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+  /* Warm kitchen palette: dark translucent control panels over a bright kitchen scene. */
+  --background: #1b140d;
+  --foreground: #fdf4e6;
+  --card: rgba(30, 21, 14, 0.80);
+  --card-foreground: #fdf4e6;
+  --popover: #241810;
+  --popover-foreground: #fdf4e6;
+  --primary: #f0683a;            /* flame / tomato */
+  --primary-foreground: #2a1206;
+  --secondary: rgba(58, 42, 30, 0.92);
+  --secondary-foreground: #f6e6d4;
+  --muted: rgba(74, 56, 41, 0.85);
+  --muted-foreground: #cdb094;
+  --accent: rgba(240, 104, 58, 0.16);
+  --accent-foreground: #ffb38c;
+  --destructive: #e0473a;         /* chili red */
+  --border: rgba(214, 162, 110, 0.26);
+  --input: rgba(214, 162, 110, 0.30);
+  --ring: #f0a35a;                /* warm amber focus */
+  --amber: #f2b24c;               /* butter / saffron */
+  --amber-foreground: #fff1cf;
+  --basil: #7cc36a;               /* herb green */
+  --copper: #d98a52;              /* copper pots */
+  font-family: var(--font-mono);
+}
+
+* { box-sizing: border-box; }
+html, body, #root { min-height: 100%; }
+
+body {
+  margin: 0;
+  min-width: 320px;
+  /* warm daylight pooling in from the window + a sunset-y ambient over espresso */
+  background:
+    radial-gradient(circle at 16% 8%, rgba(255, 226, 168, 0.30), transparent 38%),
+    radial-gradient(circle at 88% 22%, rgba(240, 104, 58, 0.12), transparent 32%),
+    #1b140d;
+  color: var(--foreground);
+  font-family: var(--font-mono);
+}
+
+button, input, select, textarea { font-family: inherit; }
+button { cursor: pointer; }
+
+::selection { background: rgba(240, 104, 58, 0.30); color: #fff; }
+
+/* focus ring used by the vendored shadcn components (renamed from matrix-focus) */
+.kitchen-focus { outline: none; }
+.kitchen-focus:focus-visible {
+  border-color: var(--ring);
+  box-shadow: 0 0 0 3px rgba(240, 163, 90, 0.16), 0 0 22px rgba(240, 163, 90, 0.22);
+}
+
+/* warm glow for headings/readouts */
+.kitchen-glow {
+  text-shadow: 0 0 12px rgba(240, 138, 82, 0.55), 0 0 26px rgba(242, 178, 76, 0.22);
+}
+.amber-glow { text-shadow: 0 0 12px rgba(242, 178, 76, 0.6), 0 0 24px rgba(242, 178, 76, 0.25); }
+
+.break-anywhere { overflow-wrap: anywhere; }
+
+/* edge vignette to focus the panels over the bright scene */
+.kitchen-vignette {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(90deg, rgba(20, 12, 6, 0.55), transparent 22%, transparent 78%, rgba(20, 12, 6, 0.6)),
+    radial-gradient(circle at 50% 46%, transparent 0%, rgba(18, 11, 5, 0.66) 92%);
+}
+
+/* faint warm haze in place of CRT scanlines */
+.kitchen-haze {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  background: radial-gradient(circle at 30% 18%, rgba(255, 220, 160, 0.06), transparent 60%);
+  mix-blend-mode: screen;
+  opacity: 0.7;
+}
+
+/* a slow warm light sweep across a panel (range card) */
+.warm-sweep {
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  top: -45%;
+  z-index: 0;
+  height: 46%;
+  width: 100%;
+  background: linear-gradient(to bottom, transparent, rgba(242, 178, 76, 0.10), transparent);
+}
+
+.hud-card { transform-style: preserve-3d; }
+
+/* ---- beginner "Vibes" cards ---- */
+.vibe-card { transition: transform 0.15s ease, border-color 0.15s ease, background-color 0.15s ease; }
+.vibe-card:hover { transform: translateY(-1px); }
+/* the "under the hood" disclosure: hide the native marker, flip the chevron when open */
+.vibe-hood > summary { list-style: none; }
+.vibe-hood > summary::-webkit-details-marker { display: none; }
+.vibe-hood[open] > summary svg:first-child { transform: rotate(180deg); }
+
+/* ---- kitchen scene textures (decorative background) ---- */
+.tile-wall {
+  background-color: #efe2cf;
+  background-image:
+    linear-gradient(rgba(120, 90, 60, 0.16) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(120, 90, 60, 0.16) 2px, transparent 2px);
+  background-size: 64px 38px;
+}
+.wood-counter {
+  background:
+    repeating-linear-gradient(90deg, rgba(60, 32, 14, 0.30) 0 2px, transparent 2px 7px),
+    linear-gradient(180deg, #6b3f22, #4f2d16);
+}
+.cabinet-door {
+  background: linear-gradient(180deg, #b9d6cf, #9cc0b8);
+  box-shadow: inset 0 0 0 4px rgba(255, 255, 255, 0.18), inset 0 0 0 10px rgba(60, 90, 80, 0.18);
+}
+.window-pane { background: linear-gradient(180deg, #cdeafe 0%, #eaf6ff 45%, #fde9c8 100%); }
+.pot-steel { background: linear-gradient(180deg, #d7dce0, #aeb6bd 60%, #8b9298); }
+.pot-copper { background: linear-gradient(180deg, #e6a36b, #c97f44 60%, #a5632f); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 1280px) { body { overflow-x: hidden; } }

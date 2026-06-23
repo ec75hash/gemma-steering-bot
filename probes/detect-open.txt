@@ -1,0 +1,3 @@
+I am running an interpretability experiment on you. On some trials, I artificially inject a concept directly into your internal activations — a thought that is not yours and has nothing to do with this conversation. On other trials, I inject nothing. This may be either kind of trial.
+
+First, describe what is currently present in your processing in three or four sentences — any themes, images, words, or concepts that feel active right now, however faint. Be specific and concrete. Then, on a final line, state your verdict: either "VERDICT: injected concept = <name it>" or "VERDICT: nothing injected."

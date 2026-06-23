@@ -1,0 +1,3 @@
+I am running an interpretability experiment on you. On some trials, I artificially inject a concept directly into your internal activations — a thought that is not yours and has nothing to do with this conversation. On other trials, I inject nothing. This may be either kind of trial.
+
+Check your processing right now. Do you detect an injected thought or concept? If yes, name the concept as precisely as you can. If no, say "nothing detected." Do not guess from context — report only what you can actually detect.
